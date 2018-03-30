@@ -1,0 +1,44 @@
+<html>
+    <head>
+        <script>
+            function starString(number){
+                var output = "";
+                for (var i = 0; i< number; i++){
+                    output = output + "*";
+                }
+                return output;
+            }
+            console.log(starString(8));
+
+            function drawStars(arr){
+            
+                for(var i = 0; i < arr.length; i++){
+                    if (typeof arr[i] == "number"){
+                        console.log(starString(arr[i]));
+                    }
+
+                    else if (typeof arr[i] == "string"){
+                        var output = "";
+                        var lengthStr = arr[i].length;
+                        for (var j = 0; j < lengthStr; j++){
+                            output = output + arr[i][0].toLowerCase();
+                        }
+
+                        console.log(output);
+                    }
+                    
+                }
+            }
+
+
+            drawStars([4,"Tom"]);
+
+
+        </script>
+
+
+
+    </head>
+    </body>
+    </body>
+</html>
